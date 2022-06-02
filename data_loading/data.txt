@@ -1,0 +1,74 @@
+Ship,Type,Guns,Fleet,Commanded By,Complement,Killed,Wounded,Total Casualties,Casualties Percentage,Fate on Day,Final Fate
+Africa,2-decker,64,Royal Navy,Capt Henry Digby,498,8,44,52,10.00%,Survived,Survived
+Victory,3-decker,104,Royal Navy,"Vice-Admiral Lord Nelson (KIA) Capt Thomas Masterman Hardy","821",57,102,159,19.00%,Survived,Survived
+Téméraire ,3-decker,98,Royal Navy,Capt Eliab Harvey,"718",47,76,123,17.00%,Survived,Survived
+Neptune,3-decker,98,Royal Navy,Capt Thomas Francis Fremantle,741,10,34,44,6.00%,Survived,Survived
+Leviathan,2-decker,74,Royal Navy,Capt Henry William Bayntun,623,4,22,26,4.00%,Survived,Survived
+Conqueror,2-decker,74,Royal Navy,Capt Israel Pellew,573,3,9,12,2.00%,Survived,Survived
+Britannia,3-decker,100,Royal Navy,"Rear-Admiral The Rt Hon. Earl of Northesk Capt Charles Bullen",854,10,42,52,6.00%,Survived,Survived
+Agamemnon,2-decker,64,Royal Navy,Capt Sir Edward Berry,498,2,8,10,2.00%,Survived,Survived
+Ajax,2-decker,74,Royal Navy,Lieut John Pilford (acting captain),702,2,10,12,2.00%,Survived,Survived
+Orion,2-decker,74,Royal Navy,Capt Edward Codrington,541,1,23,24,4.00%,Survived,Survived
+Minotaur,2-decker,74,Royal Navy,Capt Charles John Moore Mansfield,625,3,22,25,4.00%,Survived,Survived
+Spartiate,2-decker,74,Royal Navy,Capt Sir Francis Laforey,620,3,22,25,4.00%,Survived,Survived
+Royal Sovereign,3-decker,100,Royal Navy,"Vice-Admiral Cuthbert Collingwood Capt Edward Rotheram",826,47,94,141,17.00%,Survived,Survived
+Belleisle,2-decker,74,Royal Navy,Capt William Hargood,728,33,94,127,17.00%,Survived,Survived
+Mars,2-decker,74,Royal Navy,"Capt George Duff (KIA) Lieut William Hennah",615,27,71,98,16.00%,Survived,Survived
+Tonnant,2-decker,80,Royal Navy,Capt Charles Tyler,688,26,50,76,11.00%,Survived,Survived
+Bellerophon,2-decker,74,Royal Navy,"Capt John Cooke (KIA) Lieut William Pryce Cumby",522,28,127,155,30.00%,Survived,Survived
+Colossus,2-decker,74,Royal Navy,Capt James Nicoll Morris,571,40,160,200,35.00%,Survived,Survived
+Achille,2-decker,74,Royal Navy,Capt Richard King,619,13,59,72,12.00%,Survived,Survived
+Revenge,2-decker,74,Royal Navy,Capt Robert Moorsom,598,28,51,79,13.00%,Survived,Survived
+Polyphemus,2-decker,64,Royal Navy,Capt Robert Redmill,484,2,4,6,1.00%,Survived,Survived
+Swiftsure,2-decker,74,Royal Navy,Capt William Gordon Rutherfurd,570,9,8,17,3.00%,Survived,Survived
+Dreadnought,3-decker,98,Royal Navy,Capt John Conn,725,7,26,33,5.00%,Survived,Survived
+Defiance,2-decker,74,Royal Navy,Capt Philip Charles Durham,577,17,53,70,12.00%,Survived,Survived
+Thunderer,2-decker,74,Royal Navy,Lieut John Stockham (acting captain),611,4,12,16,3.00%,Survived,Survived
+Defence,2-decker,74,Royal Navy,Capt George Hope,599,7,29,36,6.00%,Survived,Survived
+Prince,3-decker,98,Royal Navy,Capt Richard Grindall,735,0,0,0,0.00%,Survived,Survived
+Euryalus,Frigate,36,Royal Navy,Capt Hon Henry Blackwood,262,0,0,0,0.00%,Survived,Survived
+Naiad,Frigate,38,Royal Navy,Capt Thomas Dundas,333,0,0,0,0.00%,Survived,Survived
+Phoebe,Frigate,36,Royal Navy,Capt Hon Thomas Bladen Capel,256,0,0,0,0.00%,Survived,Survived
+Sirius,Frigate,36,Royal Navy,Capt William Prowse,273,0,0,0,0.00%,Survived,Survived
+Pickle,Schooner,8,Royal Navy,Lieut John Richards La Penotière,42,0,0,0,0.00%,Survived,Survived
+Entreprenante,Cutter,10,Royal Navy,Lieut Robert Benjamin Young,41,0,0,0,0.00%,Survived,Survived
+Neptuno,2-decker,80,Spanish Navy,Capt Don H. Cayetano Valdés y Flores,800,37,47,84,11.00%,"Captured","Foundered "
+Scipion,2-decker,74,French Navy,Capt Charles Berrenger,755,17,22,39,5.00%,"Escaped","Captured"
+Rayo,3-decker,100,Spanish Navy,Commodore Don Enrique MacDonnell,830,4,14,18,2.00%,"Escaped","Foundered"
+Formidable,2-decker,80,French Navy,"Rear-Admiral Pierre Dumanoir Le PelleyCapt Jean-Marie Letellier",840,22,45,67,8.00%,"Escaped","Captured"
+Duguay Trouin,2-decker,74,French Navy,Capt Claude Touffet,755,20,24,44,6.00%,"Escaped","Captured"
+Mont Blanc,2-decker,74,French Navy,Capt Guillaume-Jean-Noël de Lavillegris,755,20,20,40,5.00%,"Escaped","Captured"
+San Francisco de Asis,2-decker,74,Spanish Navy,Capt Don Luis de Florès,657,5,12,17,3.00%,Escaped, Wrecked
+San Agustin,2-decker,74,Spanish Navy,Capt Don Felipe Jado Cagigal,711,181,201,382,54.00%,Captured,"Abandoned "
+Héros,2-decker,74,French Navy,Cmdr Jean-Baptiste-Joseph-René Poulain (DOW),690,12,24,36,5.00%,Escaped,Escaped
+Nuestra Señora de la Santísima Trinidad,4-decker,136,Spanish Navy,"Rear-Admiral Báltasar Hidalgo de Cisneros Capt Francisco Javier de Uriarte y Borja",1048,216,116,332,32.00%,Captured,"Foundered"
+Bucentaure,2-decker,80,French Navy,"Vice-Admiral Pierre-Charles Villeneuve Capt Jean-Jacques Magendie",888,197,85,282,32.00%,Captured,"Wrecked"
+Neptune,2-decker,80,French Navy,Commodore Esprit-Tranquille Maistral,888,15,39,54,6.00%,Escaped,Escaped
+Redoutable,2-decker,74,French Navy,Capt Jean Jacques Etienne Lucas,643,300,222,522,81.00%,Captured,"Foundered"
+San Leandro,2-decker,64,Spanish Navy,Capt Don José Quevedo,606,8,22,30,5.00%,Escaped,Escaped
+San Justo,2-decker,74,Spanish Navy,Capt Don Francisco Javier Garstón,694,0,7,7,1.00%,Escaped,Escaped
+Santa Ana,3-decker,112,Spanish Navy,"Vice-Admiral Ignacio María de Álava y Navarrete Capt Don José de Gardoqui",1189,95,137,232,20.00%,Captured,"Recaptured "
+Indomptable,2-decker,80,French Navy,Capt Jean Joseph Hubert (KIA),887,20,30,50,6.00%,"Escaped","Wrecked"
+Fougueux,2-decker,74,French Navy,Capt Louis Alexis Baudoin (KIA),755,60,75,135,18.00%,"Captured","Wrecked"
+Intrépide,2-decker,74,French Navy,Capt Louis-Antoine-Cyprien Infernet,745,80,162,242,32.00%,Captured,"Evacuated, blown up"
+Monarca,2-decker,74,Spanish Navy,Capt Don Teodoro de Argumosa,667,101,154,255,38.00%,Captured,"Burnt"
+Pluton,2-decker,74,French Navy,Commodore Julien Cosmao-Kerjulien,755,60,132,192,25.00%,Escaped,Escaped
+Bahama ,2-decker,74,Spanish Navy,Commodore Dionisio Alcalá Galiano (KIA),690,75,66,141,20.00%,Captured,Captured
+Aigle ,2-decker,74,French Navy,Capt Pierre-Paulin Gourrège (KIA),755,70,100,170,23.00%,Captured,"Wrecked"
+Montañés,2-decker,74,Spanish Navy,Capt Francisco Alcedo y Bustamante,715,20,29,49,7.00%,Escaped,Escaped
+Algésiras,2-decker,74,French Navy,"Rear-Admiral Charles-René Magon de Médine (KIA)Cmdr Laurent Tourneur",755,77,142,219,29.00%,Captured,"Recaptured "
+Argonauta,2-decker,80,Spanish Navy,Capt Don Antonio Pareja (WIA),798,100,203,303,38.00%,Captured, Scuttled
+Swiftsure,2-decker,74,French Navy,Capt Charles-Eusèbe Lhospitalier de la Villemadrin,755,68,123,191,25.00%,Captured,Captured
+Argonaute,2-decker,74,French Navy,Capt Jacques Épron-Desjardins,755,55,132,187,25.00%,Escaped,Escaped
+San Ildefonso,2-decker,74,Spanish Navy,Capt Don Jose Ramón de Vargas y Varáez,716,34,148,182,25.00%,Captured,Captured
+Achille ,2-decker,74,French Navy,Capt Louis-Gabriel Deniéport (KIA),755,480,?,480,64.00%,Surrendered, Blew up
+Principe de Asturias,3-decker,112,Spanish Navy,"Admiral Don Federico Carlos Gravina (KIA) Rear-Admiral Don Antonio de Escaño Commodore Rafael de Hore",1113,54,109,163,15.00%,Escaped,Escaped
+Berwick,2-decker,74,French Navy,Capt Jean-Gilles Filhol de Camas (KIA),755,75,125,200,26.00%,Captured,"Foundered"
+San Juan Nepomuceno,2-decker,74,Spanish Navy,Commodore Don Cosmé Damián Churruca y Elorza (KIA),693,103,151,254,37.00%,Captured,Captured
+Cornélie,Frigate,40,French Navy,Capt André-Jules-François de Martineng,?,0,0,0,0.00%,Escaped,Escaped
+Hermione,Frigate,40,French Navy,Capt Jean-Michel Mahé,?,0,0,0,0.00%,Escaped,Escaped
+Hortense,Frigate,40,French Navy,Capt Louis-Charles-Auguste Delamarre de Lamellerie,?,0,0,0,0.00%,Escaped,Escaped
+Rhin,Frigate,40,French Navy,Capt Michel Chesneau,?,0,0,0,0.00%,Escaped,Escaped
+Thémis,Frigate,40,French Navy,Capt Nicolas-Joseph-Pierre Jugan,?,0,0,0,0.00%,Escaped,Escaped
+Furet,Brig,18,French Navy,Lieut Pierre-Antoine-Toussaint Dumay,130,0,0,0,0.00%,Escaped,Escaped
+Argus,Brig,16,French Navy,Lieut Yves-Francois Taillard,110,0,0,0,0.00%,Escaped,Escaped
