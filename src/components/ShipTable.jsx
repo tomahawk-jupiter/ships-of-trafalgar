@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { OverlayTrigger, Table, Popover, Button } from "react-bootstrap";
 import ships from "../data/shipData";
-import SelectInput from "./inputs/SelectInput";
+import SelectFleet from "./inputs/SelectFleet";
+import SelectType from "./inputs/SelectType";
 import ShipInput from "./inputs/ShipInput";
 
 const ShipRow = ({ index, ship }) => {
@@ -50,56 +51,73 @@ const ShipRow = ({ index, ship }) => {
 const ShipTable = () => {
   const [shipsArr, setShipsArr] = useState(ships);
   const [input, setInput] = useState("");
-  const [selectInput, setSelectInput] = useState("Fleet");
+  const [selectFleet, setSelectFleet] = useState("Select Fleet");
+  const [selectType, setSelectType] = useState("Select Type");
   const header = Object.keys(ships[0]);
 
   useEffect(() => {
-    /// Filter ships by name ///
-    const escapeRegex = (string) => {
-      return string.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
+    const filterByName = () => {
+      const escapeRegex = (string) => {
+        return string.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
+      };
+      const cleanInput = escapeRegex(input);
+      const regex = new RegExp(`^${cleanInput}`, "i");
+      const filteredShips = ships.filter((ship) => {
+        return regex.test(ship.Ship);
+      });
+      return filteredShips;
     };
-    const cleanInput = escapeRegex(input);
-    const regex = new RegExp(`^${cleanInput}`, "i");
-    const filteredShips = ships.filter((ship) => {
-      return regex.test(ship.Ship);
-    });
-    setShipsArr(filteredShips);
-    console.log({ selectInput });
-    if (selectInput !== "Fleet") {
-      const filteredFleet = shipsArr.filter((ship) => {
-        return ship.Fleet === selectInput;
+
+    const filterByFleet = () => {
+      /// Filter ships by fleet using select input ///
+      if (selectFleet !== "Select Fleet") {
+        const namedFiltered = filterByName();
+        const filteredFleet = namedFiltered.filter((ship) => {
+          return ship.Fleet === selectFleet;
+        });
+        // setShipsArr(filteredFleet);
+        return filteredFleet;
+      }
+
+      if (selectFleet === "Select Fleet") {
+        const namedFiltered = filterByName();
+        // setShipsArr(namedFiltered);
+        return namedFiltered;
+      }
+    };
+
+    /// Select ship type ///
+    if (selectType !== "Select Type") {
+      // const namedFiltered = filterByName();
+      const filteredSoFar = filterByFleet();
+      const filteredFleet = filteredSoFar.filter((ship) => {
+        return ship.Type === selectType;
       });
       setShipsArr(filteredFleet);
+      // return;
     }
-  }, [input, selectInput]);
 
-  // useEffect(() => {
-  //   if (selectInput !== "Fleet") {
-  //     const filteredFleet = shipsArr.filter((ship) => {
-  //       return ship.Fleet === selectInput;
-  //     });
-  //     setShipsArr(filteredFleet);
-  //   }
-  // }, [selectInput]);
+    if (selectType === "Select Type") {
+      const filteredSoFar = filterByFleet();
+      setShipsArr(filteredSoFar);
+      // return;
+    }
+  }, [input, selectFleet, selectType, ships]);
 
   return (
-    <Table className="m-2" striped bordered hover>
+    <Table striped bordered hover>
       <thead>
         <tr>
           <th>#</th>
           <th>
-            {/* {header[0]} */}
-
             <ShipInput userInput={input} setInput={setInput} />
           </th>
-          <th>{header[1]}</th>
+          <th>
+            <SelectType setSelectType={setSelectType} />
+          </th>
           <th>{header[2]}</th>
           <th>
-            {/* {header[3]} */}
-            <SelectInput
-              selectInput={selectInput}
-              setSelectInput={setSelectInput}
-            />
+            <SelectFleet setSelectFleet={setSelectFleet} />
           </th>
         </tr>
       </thead>
