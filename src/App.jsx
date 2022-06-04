@@ -14,7 +14,6 @@ const App = () => {
           between the British Royal Navy and the combined fleets of the French
           and Spanish Navies. Click on each ship for for info.
         </p>
-        {/* <ShipTable userInput={input} setInput={setInput} /> */}
         <div className="container-fluid p-0">
           <ShipTable />
         </div>

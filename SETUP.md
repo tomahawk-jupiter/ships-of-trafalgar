@@ -52,6 +52,8 @@ Or to setup a default package.json
 
 **Note**: -D is the same as --save-dev
 
+[Contents](#contents)
+
 ## Webpack Configuration
 
 ### Create `webpack.config.js`
@@ -105,6 +107,8 @@ To cleanup the dist folder each build, add this to the output part of the `webpa
 
     clean: true
 
+[Contents](#contents)
+
 ## Asset Management
 
 [webpack docs](https://webpack.js.org/guides/asset-management/#loading-css)
@@ -128,6 +132,8 @@ Config:
       ],
     },
 
+[Contents](#contents)
+
 ## Images
 
     {
@@ -147,6 +153,8 @@ Or like this:
 
     <img src={one}>
 
+[Contents](#contents)
+
 ## JSX
 
 VSCode will let you use html / react snippets, ie. for html tags and react attribute versions eg. className, if the file extension is .jsx. NOTE: I think the snippets need to be installed in VSCode first.
@@ -160,6 +168,8 @@ However there is an error when webpack tries to build these files. Fix with:
 Also test for .jsx and .js:
 
     test: /\.(js|jsx)$/,
+
+[Contents](#contents)
 
 ## Sass Setup
 
@@ -183,6 +193,8 @@ Now just import sass files into jsx files like you would do with css files.
 
     import './app.sass';
 
+[Contents](#contents)
+
 ## Add scripts
 
 One for webpack-dev-server, one for building into dist folder.
@@ -196,6 +208,8 @@ One for webpack-dev-server, one for building into dist folder.
 **--open** will open automatically when we run the command  
 **--hot** will auto reload when you save
 
+[Contents](#contents)
+
 ## Create index.js and index.html
 
 Create `src/index.js` folder and file. This is where the React app goes.
@@ -205,6 +219,8 @@ Create a template file `src/index.html`.
 Fill in the html boilerplate and a `<div id=”app”></div>` element for the React app to go.
 
 We don’t need to include the bundle file, webpack will do that for us (html-webpack-plugin).
+
+[Contents](#contents)
 
 ## Babel Config
 
@@ -217,6 +233,8 @@ Create `.babelrc`.
       ]
     }
 
+[Contents](#contents)
+
 ## Index js
 
     import React from ‘react’;				// we can use ES6 modules because it will get compiled
@@ -224,6 +242,8 @@ Create `.babelrc`.
     import App from ‘./components/App’;
 
     ReactDOM.render(<App />, document.getElementById(‘app’));
+
+[Contents](#contents)
 
 ## Components folder
 
@@ -257,6 +277,8 @@ Or use functional components:
       )
     }
 
+[Contents](#contents)
+
 ## Github Pages
 
 You can use this command to push the build folder to git hub in its own branch. Then you can go to settings and set this as the branch to host the page.
@@ -264,6 +286,8 @@ You can use this command to push the build folder to git hub in its own branch. 
     $ git subtree push --prefix dist origin gh-pages
 
 This is a helpful article that shows webpack, babel and react setup. It also shows how to setup `prettier` and `ESlint`.
+
+[Contents](#contents)
 
 ## React-Bootstrap
 

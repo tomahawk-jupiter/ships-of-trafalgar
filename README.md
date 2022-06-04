@@ -1,18 +1,39 @@
 # Ships of Trafalgar
 
-A table created with React-bootstrap. Filter the data that is displayed in different ways.
-
-I wanted to practice react-bootstrap and also making a search / filter bar that works in real time, ie. as the user types.
+A table created with React-bootstrap. Data can be filtered by various categories.
 
 ## Contents
 
-Trouble Shooting
-
+- [Overview](#overview)
 - [Async and Await Babel setup](#async-and-await-babel-setup)
 - [Favicon](#favicon)
 - [Papa Parse](#papa-parse)
 
+## Overview
+
+I wanted to try out react-bootstrap and also make a search / filter input that works in real time, ie. as the user types.
+
+The bulk of the content is a table created in the `ShipTable` component.
+
+The header row is made up of input components that can be used to filter the tables data.
+
+Each input component is created in its own react component using react-bootstrap components. The user input from these are stored in useState values in the main table component. The setValue functions are passed as props.
+
+All the filtering logic is in a useEffect hook in the `ShipTable` component.
+
+Each ship in the table is also a button that will display details about the outcome of the battle. This is achieved using the `OverlayTrigger` and `Popover` components from `React-bootstrap`.
+
+The info within the popovers is from the original data that I didn't include in the table.
+
+[Contents](#contents)
+
+### Ship Data
+
+The ship data originally came from wikipedia.
+
 ## Trouble Shooting
+
+Things I had to look up. I didn't use all these things in the end but its useful to know for the future.
 
 ### Async and Await Babel setup
 
@@ -27,6 +48,8 @@ In .babelrc:
         "regenerator": true
       }]
     ]
+
+[Contents](#contents)
 
 ### Favicon
 
@@ -60,8 +83,8 @@ Usage:
       }
     );
 
-NOTE - header: true will give data in json using the header row for the keys.
+NOTE - header: true will parse the data to json using the header row for the keys.
 
-I couldn't figure out how to get this working with react. The data wasn't available for the first render and so there were errors.
+I couldn't figure out how to get this working with react. I tried loading data (using papaparse) in a useEffect hook and storing in a useState value but this value was undefined and caused errors. I think this is because it wasn't available on the first render.
 
-I ended up just storing the data in its own module.
+[Contents](#contents)

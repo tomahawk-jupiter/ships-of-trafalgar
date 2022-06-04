@@ -7,7 +7,7 @@ const SelectType = ({ setSelectType }) => {
       onChange={(e) => setSelectType(e.target.value)}
       aria-label="Select ship type"
     >
-      <option>Select Type</option>
+      <option>Type</option>
       <option value="4-decker">4-decker</option>
       <option value="3-decker">3-decker</option>
       <option value="2-decker">2-decker</option>

@@ -1,59 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { OverlayTrigger, Table, Popover, Button } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 import ships from "../data/shipData";
 import SelectFleet from "./inputs/SelectFleet";
 import SelectType from "./inputs/SelectType";
+import SelectGuns from "./inputs/SelectGuns";
 import ShipInput from "./inputs/ShipInput";
-
-const ShipRow = ({ index, ship }) => {
-  const Fate = () => {
-    if (ship["Fate on Day"] === ship["Final Fate"]) {
-      return `Ship ${ship["Fate on Day"].toUpperCase()}`;
-    }
-    return `Ship ${ship["Fate on Day"].toUpperCase()} and later ${ship[
-      "Final Fate"
-    ].toUpperCase()}`;
-  };
-
-  const popover = (
-    <Popover id="popover-basic">
-      <Popover.Header as="h3">{ship.Ship}</Popover.Header>
-      <Popover.Body>
-        <div>
-          {`A ${ship.Guns} gun ${ship.Type} of the ${ship.Fleet}, ${ship["Casualties Percentage"]} casualty rate. Of ${ship.Complement} souls, ${ship.Wounded} wounded and ${ship.Killed} killed.`}
-        </div>
-        <Fate />
-      </Popover.Body>
-    </Popover>
-  );
-
-  const Example = ({ name }) => (
-    <OverlayTrigger trigger="click" placement="right" overlay={popover}>
-      <Button size="sm" variant="primary">
-        {name}
-      </Button>
-    </OverlayTrigger>
-  );
-
-  return (
-    <tr>
-      <td>{index}</td>
-      <td>
-        <Example name={ship.Ship} />
-      </td>
-      <td>{ship.Type}</td>
-      <td>{ship.Guns}</td>
-      <td>{ship.Fleet}</td>
-    </tr>
-  );
-};
+import ShipRow from "./ShipRow";
 
 const ShipTable = () => {
   const [shipsArr, setShipsArr] = useState(ships);
   const [input, setInput] = useState("");
-  const [selectFleet, setSelectFleet] = useState("Select Fleet");
-  const [selectType, setSelectType] = useState("Select Type");
-  const header = Object.keys(ships[0]);
+  const [selectFleet, setSelectFleet] = useState("Fleet");
+  const [selectType, setSelectType] = useState("Type");
+  const [selectGuns, setSelectGuns] = useState("Guns");
 
   useEffect(() => {
     const filterByName = () => {
@@ -69,40 +28,51 @@ const ShipTable = () => {
     };
 
     const filterByFleet = () => {
-      /// Filter ships by fleet using select input ///
-      if (selectFleet !== "Select Fleet") {
+      if (selectFleet !== "Fleet") {
         const namedFiltered = filterByName();
         const filteredFleet = namedFiltered.filter((ship) => {
           return ship.Fleet === selectFleet;
         });
-        // setShipsArr(filteredFleet);
         return filteredFleet;
       }
 
-      if (selectFleet === "Select Fleet") {
+      if (selectFleet === "Fleet") {
         const namedFiltered = filterByName();
-        // setShipsArr(namedFiltered);
         return namedFiltered;
       }
     };
 
-    /// Select ship type ///
-    if (selectType !== "Select Type") {
-      // const namedFiltered = filterByName();
-      const filteredSoFar = filterByFleet();
-      const filteredFleet = filteredSoFar.filter((ship) => {
-        return ship.Type === selectType;
+    const filterByType = () => {
+      if (selectType !== "Type") {
+        const filteredSoFar = filterByFleet();
+        const filteredFleet = filteredSoFar.filter((ship) => {
+          return ship.Type === selectType;
+        });
+        return filteredFleet;
+      }
+
+      if (selectType === "Type") {
+        const filteredSoFar = filterByFleet();
+        return filteredSoFar;
+      }
+    };
+
+    if (selectGuns !== "Guns") {
+      const filteredSoFar = filterByType();
+      const gunsMinMax = selectGuns.split("-");
+      const minGun = Number(gunsMinMax[0]);
+      const maxGun = Number(gunsMinMax[1]);
+      const filteredByGuns = filteredSoFar.filter((ship) => {
+        return ship.Guns >= minGun && ship.Guns <= maxGun;
       });
-      setShipsArr(filteredFleet);
-      // return;
+      setShipsArr(filteredByGuns);
     }
 
-    if (selectType === "Select Type") {
-      const filteredSoFar = filterByFleet();
+    if (selectGuns === "Guns") {
+      const filteredSoFar = filterByType();
       setShipsArr(filteredSoFar);
-      // return;
     }
-  }, [input, selectFleet, selectType, ships]);
+  }, [input, selectFleet, selectType, selectGuns, ships]);
 
   return (
     <Table striped bordered hover>
@@ -115,7 +85,9 @@ const ShipTable = () => {
           <th>
             <SelectType setSelectType={setSelectType} />
           </th>
-          <th>{header[2]}</th>
+          <th>
+            <SelectGuns setSelectGuns={setSelectGuns} />
+          </th>
           <th>
             <SelectFleet setSelectFleet={setSelectFleet} />
           </th>

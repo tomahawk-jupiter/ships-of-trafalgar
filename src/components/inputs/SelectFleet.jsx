@@ -7,7 +7,7 @@ const SelectFleet = ({ setSelectFleet }) => {
       onChange={(e) => setSelectFleet(e.target.value)}
       aria-label="Select which countries fleet"
     >
-      <option>Select Fleet</option>
+      <option>Fleet</option>
       <option value="Royal Navy">Royal Navy</option>
       <option value="French Navy">French Navy</option>
       <option value="Spanish Navy">Spanish Navy</option>
