@@ -2,6 +2,8 @@
 
 A table created with React-bootstrap. Data can be filtered by various categories.
 
+[Live Demo](https://tomahawk-jupiter.github.io/ships-of-trafalgar/)
+
 ## Contents
 
 - [Overview](#overview)
